@@ -1,0 +1,243 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* agreement_suspension
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2025-02-09 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. module: agreement_suspension
+#: model_terms:ir.ui.view,arch_db:agreement_suspension.agreement_form_suspension
+#: model_terms:ir.ui.view,arch_db:agreement_suspension.agreement_suspension_list
+msgid "Delete"
+msgstr "Xóa"
+
+#. module: agreement_suspension
+#: model_terms:ir.ui.view,arch_db:agreement_suspension.agreement_form_suspension
+#: model_terms:ir.ui.view,arch_db:agreement_suspension.agreement_suspension_list
+msgid "Delete this suspension?"
+msgstr "Xóa bảo lưu này?"
+
+#. module: agreement_suspension
+#: model_terms:ir.ui.view,arch_db:agreement_suspension.agreement_form_suspension
+msgid "Add suspension"
+msgstr "Thêm bảo lưu"
+
+#. module: agreement_suspension
+#. odoo-python
+#: code:addons/agreement_suspension/models/agreement_suspension.py:0
+#: model_terms:ir.ui.view,arch_db:agreement_suspension.agreement_suspension_list
+#: model_terms:ir.ui.view,arch_db:agreement_suspension.agreement_form_suspension
+#: model_terms:ir.ui.view,arch_db:agreement_suspension.agreement_suspension_form
+msgid "End suspension"
+msgstr "Kết thúc bảo lưu"
+
+#. module: agreement_suspension
+#: model_terms:ir.ui.view,arch_db:agreement_suspension.agreement_form_suspension
+msgid "Suspension"
+msgstr "Bảo lưu"
+
+#. module: agreement_suspension
+#: model:ir.model.fields,field_description:agreement_suspension.field_agreement_suspension__actual_end_date
+#: model:ir.model.fields,field_description:agreement_suspension.field_agreement_suspension_end_wizard__date_end_actual
+msgid "Actual end date"
+msgstr "Ngày kết thúc thực tế"
+
+#. module: agreement_suspension
+#: model:ir.model.fields,field_description:agreement_suspension.field_agreement_suspension__agreement_id
+#: model:ir.model.fields,field_description:agreement_suspension.field_agreement_suspension_wizard__agreement_id
+msgid "Agreement"
+msgstr "Thỏa thuận"
+
+#. module: agreement_suspension
+#: model_terms:ir.ui.view,arch_db:agreement_suspension.agreement_suspension_wizard_form
+msgid "Agreement Suspension"
+msgstr "Bảo lưu thời hạn"
+
+#. module: agreement_suspension
+#: model_terms:ir.ui.view,arch_db:agreement_suspension.agreement_suspension_wizard_form
+#: model:ir.actions.act_window,name:agreement_suspension.action_agreement_suspension_wizard
+msgid "Agreement suspension"
+msgstr "Bảo lưu thời hạn"
+
+#. module: agreement_suspension
+#: model_terms:ir.ui.view,arch_db:agreement_suspension.agreement_suspension_form
+msgid "Activate suspension"
+msgstr "Kích hoạt bảo lưu"
+
+#. module: agreement_suspension
+#: model:ir.model.fields.selection,name:agreement_suspension.selection__agreement_suspension__state__active
+msgid "Active"
+msgstr "Đang bảo lưu"
+
+#. module: agreement_suspension
+#: model_terms:ir.ui.view,arch_db:agreement_suspension.agreement_suspension_wizard_form
+#: model_terms:ir.ui.view,arch_db:agreement_suspension.agreement_suspension_end_wizard_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: agreement_suspension
+#: model_terms:ir.ui.view,arch_db:agreement_suspension.agreement_suspension_end_wizard_form
+msgid "Confirm end suspension"
+msgstr "Xác nhận kết thúc bảo lưu"
+
+#. module: agreement_suspension
+#: model_terms:ir.ui.view,arch_db:agreement_suspension.agreement_suspension_wizard_form
+msgid "Confirm suspension"
+msgstr "Xác nhận bảo lưu"
+
+#. module: agreement_suspension
+#: model:ir.model.fields.selection,name:agreement_suspension.selection__agreement_suspension__state__done
+msgid "Done"
+msgstr "Đã kết thúc"
+
+#. module: agreement_suspension
+#: model:ir.model.fields.selection,name:agreement_suspension.selection__agreement_suspension__state__draft
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: agreement_suspension
+#: model_terms:ir.ui.view,arch_db:agreement_suspension.agreement_suspension_end_wizard_form
+msgid "Choose the actual end date to complete this suspension and extend the agreement."
+msgstr "Chọn ngày kết thúc thực tế để hoàn tất đợt bảo lưu và gia hạn thỏa thuận."
+
+#. module: agreement_suspension
+#: model:ir.model.fields,field_description:agreement_suspension.field_agreement_suspension__days
+msgid "Days"
+msgstr "Số ngày"
+
+#. module: agreement_suspension
+#: model:ir.model.fields,field_description:agreement_suspension.field_agreement__max_suspension_days
+msgid "Max suspension days"
+msgstr "Số ngày bảo lưu tối đa"
+
+#. module: agreement_suspension
+#: model:ir.model.fields.selection,name:agreement_suspension.selection__agreement__suspension_state__normal
+msgid "Normal"
+msgstr "Bình thường"
+
+#. module: agreement_suspension
+#: model:ir.model.fields,field_description:agreement_suspension.field_agreement_suspension__reason
+#: model:ir.model.fields,field_description:agreement_suspension.field_agreement_suspension_wizard__reason
+msgid "Reason"
+msgstr "Lý do"
+
+#. module: agreement_suspension
+#: model_terms:ir.ui.view,arch_db:agreement_suspension.agreement_suspension_wizard_form
+msgid "Reason for suspension..."
+msgstr "Lý do bảo lưu..."
+
+#. module: agreement_suspension
+#: model:ir.model.fields,field_description:agreement_suspension.field_agreement_suspension__date_start
+#: model:ir.model.fields,field_description:agreement_suspension.field_agreement_suspension_wizard__date_start
+msgid "Suspension start"
+msgstr "Ngày bắt đầu bảo lưu"
+
+#. module: agreement_suspension
+#: model:ir.model.fields,field_description:agreement_suspension.field_agreement_suspension__date_end
+#: model:ir.model.fields,field_description:agreement_suspension.field_agreement_suspension_wizard__date_end
+msgid "Suspension end"
+msgstr "Ngày kết thúc bảo lưu"
+
+#. module: agreement_suspension
+#. odoo-python
+#: code:addons/agreement_suspension/models/agreement_suspension.py:0
+msgid "Suspension end date must be >= start date."
+msgstr "Ngày kết thúc bảo lưu phải lớn hơn hoặc bằng ngày bắt đầu."
+
+#. module: agreement_suspension
+#. odoo-python
+#: code:addons/agreement_suspension/models/agreement_suspension.py:0
+msgid "Only active suspensions can be ended."
+msgstr "Chỉ có thể kết thúc các đợt bảo lưu đang hoạt động."
+
+#. module: agreement_suspension
+#. odoo-python
+#: code:addons/agreement_suspension/models/agreement_suspension.py:0
+msgid "Agreement has no end date to extend."
+msgstr "Thỏa thuận không có ngày kết thúc để gia hạn."
+
+#. module: agreement_suspension
+#. odoo-python
+#: code:addons/agreement_suspension/models/agreement_suspension.py:0
+msgid "Actual end date must be between %(start)s and %(end)s."
+msgstr "Ngày kết thúc thực tế phải nằm trong khoảng từ %(start)s đến %(end)s."
+
+#. module: agreement_suspension
+#. odoo-python
+#: code:addons/agreement_suspension/wizard/agreement_suspension_end_wizard.py:0
+msgid "Actual end date must be on or after suspension start (%(start)s)."
+msgstr "Ngày kết thúc thực tế phải vào hoặc sau ngày bắt đầu bảo lưu (%(start)s)."
+
+#. module: agreement_suspension
+#. odoo-python
+#: code:addons/agreement_suspension/wizard/agreement_suspension_end_wizard.py:0
+msgid "Actual end date must be on or before suspension end (%(end)s)."
+msgstr "Ngày kết thúc thực tế phải vào hoặc trước ngày kết thúc bảo lưu (%(end)s)."
+
+#. module: agreement_suspension
+#. odoo-python
+#: code:addons/agreement_suspension/models/agreement_suspension.py:0
+msgid "Suspension start must be on or after agreement start date (%(start)s)."
+msgstr "Ngày bắt đầu bảo lưu phải vào hoặc sau ngày bắt đầu thỏa thuận (%(start)s)."
+
+#. module: agreement_suspension
+#. odoo-python
+#: code:addons/agreement_suspension/models/agreement_suspension.py:0
+msgid "Suspension end must be on or before agreement end date (%(end)s)."
+msgstr "Ngày kết thúc bảo lưu phải vào hoặc trước ngày kết thúc thỏa thuận (%(end)s)."
+
+#. module: agreement_suspension
+#: code:addon/agreement_suspension/models/agreement_suspension.py:0
+msgid "Only draft suspensions can be deleted. Suspension '%(name)s' is in state '%(state)s'."
+msgstr "Chỉ được xóa bảo lưu ở trạng thái nháp. Bảo lưu '%(name)s' đang ở trạng thái '%(state)s'."
+
+#. module: agreement_suspension
+#: model:ir.model.fields,field_description:agreement_suspension.field_agreement_suspension__state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: agreement_suspension
+#: model:ir.model.fields,field_description:agreement_suspension.field_agreement__suspension_state
+msgid "Suspension status"
+msgstr "Trạng thái bảo lưu"
+
+#. module: agreement_suspension
+#: model:ir.model.fields.selection,name:agreement_suspension.selection__agreement__suspension_state__suspended
+msgid "Suspended"
+msgstr "Đang bảo lưu"
+
+#. module: agreement_suspension
+#: model:ir.model.fields,field_description:agreement_suspension.field_agreement__suspension_ids
+msgid "Suspensions"
+msgstr "Các đợt bảo lưu"
+
+#. module: agreement_suspension
+#: model:ir.model.fields,field_description:agreement_suspension.field_agreement__suspension_count
+msgid "# Suspensions"
+msgstr "# Bảo lưu"
+
+#. module: agreement_suspension
+#: model:ir.model.fields,field_description:agreement_suspension.field_agreement__total_suspension_days_used
+msgid "Total suspension days used"
+msgstr "Tổng số ngày đã bảo lưu"
+
+#. module: agreement_suspension
+#. odoo-python
+#: code:addons/agreement_suspension/models/agreement_suspension.py:0
+msgid "Total suspension days (%(total)s) would exceed the maximum allowed (%(max)s) for this agreement."
+msgstr "Tổng số ngày bảo lưu (%(total)s) vượt quá số ngày tối đa cho phép (%(max)s) của thỏa thuận này."
+
+#. module: agreement_suspension
+#: model:ir.cron,name:agreement_suspension.ir_cron_auto_end_agreement_suspensions
+msgid "Agreement Suspension: auto-end past suspensions"
+msgstr "Bảo lưu thỏa thuận: Tự động kết thúc các đợt bảo lưu đã quá hạn"

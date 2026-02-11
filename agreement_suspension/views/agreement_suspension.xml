@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="agreement_suspension_list" model="ir.ui.view">
+        <field name="name">agreement.suspension.list</field>
+        <field name="model">agreement.suspension</field>
+        <field name="arch" type="xml">
+            <list string="Suspensions" create="0" delete="1">
+                <field name="agreement_id" />
+                <field name="date_start" />
+                <field name="date_end" />
+                <field name="days" />
+                <field name="state" />
+                <field name="reason" optional="hide" />
+                <button
+                    name="action_open_end_wizard"
+                    type="object"
+                    string="End suspension"
+                    icon="fa-check"
+                    invisible="state != 'active'"
+                />
+                <button
+                    name="action_delete"
+                    type="object"
+                    string="Delete"
+                    icon="fa-trash"
+                    confirm="Delete this suspension?"
+                />
+            </list>
+        </field>
+    </record>
+    <record id="agreement_suspension_form" model="ir.ui.view">
+        <field name="name">agreement.suspension.form</field>
+        <field name="model">agreement.suspension</field>
+        <field name="arch" type="xml">
+            <form string="Agreement Suspension">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="agreement_id" />
+                            <field name="date_start" />
+                            <field name="date_end" />
+                            <field name="actual_end_date" />
+                            <field name="days" />
+                            <field
+                                name="state"
+                                widget="badge"
+                                decoration-info="state == 'draft'"
+                                decoration-success="state == 'done'"
+                                decoration-warning="state == 'active'"
+                            />
+                        </group>
+                        <group>
+                            <field name="reason" colspan="2" />
+                        </group>
+                    </group>
+                    <div class="oe_button_box" name="button_box">
+                        <button
+                            name="action_activate"
+                            string="Activate suspension"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-play"
+                            invisible="state != 'draft'"
+                        />
+                        <button
+                            name="action_open_end_wizard"
+                            string="End suspension"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-check"
+                            invisible="state != 'active'"
+                        />
+                    </div>
+                </sheet>
+                <chatter />
+            </form>
+        </field>
+    </record>
+</odoo>

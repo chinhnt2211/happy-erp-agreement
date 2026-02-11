@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="agreement_suspension_wizard_form" model="ir.ui.view">
+        <field name="name">agreement.suspension.wizard.form</field>
+        <field name="model">agreement.suspension.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Agreement Suspension">
+                <group>
+                    <field name="agreement_id" />
+                    <field name="date_start" />
+                    <field name="date_end" />
+                    <field name="reason" placeholder="Reason for suspension..." />
+                </group>
+                <footer>
+                    <button
+                        name="action_confirm"
+                        string="Confirm suspension"
+                        type="object"
+                        class="btn-primary"
+                    />
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="action_agreement_suspension_wizard" model="ir.actions.act_window">
+        <field name="name">Agreement Suspension</field>
+        <field name="res_model">agreement.suspension.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="agreement.model_agreement" />
+    </record>
+    <record id="agreement_suspension_end_wizard_form" model="ir.ui.view">
+        <field name="name">agreement.suspension.end.wizard.form</field>
+        <field name="model">agreement.suspension.end.wizard</field>
+        <field name="arch" type="xml">
+            <form string="End suspension">
+                <sheet>
+                    <div class="oe_title mb-3">
+                        <p
+                            class="text-muted small mb-0"
+                        >Choose the actual end date to complete this suspension and extend the agreement.</p>
+                    </div>
+                    <group>
+                        <field name="suspension_id" />
+                        <field name="date_end_actual" />
+                    </group>
+                </sheet>
+                <footer>
+                    <button
+                        name="action_confirm"
+                        string="Confirm end suspension"
+                        type="object"
+                        class="btn-primary"
+                    />
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

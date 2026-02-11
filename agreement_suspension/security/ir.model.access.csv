@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_agreement_suspension_user,agreement.suspension user,agreement_suspension.model_agreement_suspension,base.group_user,1,1,1,1
+access_agreement_suspension_manager,agreement.suspension manager,agreement_suspension.model_agreement_suspension,base.group_system,1,1,1,1
+access_agreement_suspension_wizard_user,agreement.suspension.wizard user,agreement_suspension.model_agreement_suspension_wizard,base.group_user,1,1,1,1
+access_agreement_suspension_end_wizard_user,agreement.suspension.end.wizard user,agreement_suspension.model_agreement_suspension_end_wizard,base.group_user,1,1,1,1

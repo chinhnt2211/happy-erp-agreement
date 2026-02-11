@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  Copyright 2025 - Happy ERP
+  License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <!-- Form: statusbar, buttons, user_id, note -->
+    <record id="agreement_form_management" model="ir.ui.view">
+        <field name="name">agreement.form.management</field>
+        <field name="model">agreement</field>
+        <field name="inherit_id" ref="agreement.agreement_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="before">
+                <header>
+                    <button
+                        name="action_confirm"
+                        string="Activate"
+                        type="object"
+                        class="btn-primary"
+                        invisible="state != 'draft'"
+                    />
+                    <button
+                        name="action_close"
+                        string="Close"
+                        type="object"
+                        class="btn-danger"
+                        invisible="state == 'closed'"
+                    />
+                    <button
+                        name="action_reset_draft"
+                        string="Reset to Draft"
+                        type="object"
+                        class="btn-secondary"
+                        invisible="state == 'draft'"
+                    />
+                    <field
+                        name="state"
+                        widget="statusbar"
+                        statusbar_visible="draft,active,expired,closed"
+                    />
+                </header>
+            </xpath>
+            <xpath expr="//group[@name='right']" position="inside">
+                <field name="user_id" options="{'no_create': True}" />
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page name="notes" string="Notes">
+                    <field
+                        name="note"
+                        placeholder="Notes and remarks about this agreement..."
+                        nolabel="1"
+                    />
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- List: state, user_id, create_date -->
+    <record id="agreement_tree_management" model="ir.ui.view">
+        <field name="name">agreement.tree.management</field>
+        <field name="model">agreement</field>
+        <field name="inherit_id" ref="agreement.agreement_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//list" position="inside">
+                <field
+                    name="state"
+                    optional="show"
+                    widget="badge"
+                    decoration-info="state == 'draft'"
+                    decoration-success="state == 'active'"
+                    decoration-warning="state == 'expired'"
+                    decoration-danger="state == 'closed'"
+                />
+                <field name="user_id" optional="show" />
+                <field name="create_date" optional="hide" />
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Search: filters by state -->
+    <record id="agreement_search_management" model="ir.ui.view">
+        <field name="name">agreement.search.management</field>
+        <field name="model">agreement</field>
+        <field name="inherit_id" ref="agreement.agreement_search" />
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='inactive']" position="before">
+                <separator />
+                <filter
+                    name="state_draft"
+                    string="Draft"
+                    domain="[('state', '=', 'draft')]"
+                />
+                <filter
+                    name="state_active"
+                    string="Active"
+                    domain="[('state', '=', 'active')]"
+                />
+                <filter
+                    name="state_expired"
+                    string="Expired"
+                    domain="[('state', '=', 'expired')]"
+                />
+                <filter
+                    name="state_closed"
+                    string="Closed"
+                    domain="[('state', '=', 'closed')]"
+                />
+                <separator />
+                <filter
+                    name="my_agreements"
+                    string="My Agreements"
+                    domain="[('user_id', '=', uid)]"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>

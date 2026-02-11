@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="agreement_form_suspension" model="ir.ui.view">
+        <field name="name">agreement.form.suspension</field>
+        <field name="model">agreement</field>
+        <field name="inherit_id" ref="agreement.agreement_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button
+                    name="%(agreement_suspension.action_agreement_suspension_wizard)d"
+                    type="action"
+                    class="oe_stat_button"
+                    icon="fa-pause-circle-o"
+                    string="Suspension"
+                    context="{'form_view_initial_mode': 'edit'}"
+                    invisible="is_template or suspension_state == 'suspended'"
+                >
+                    <field
+                        name="suspension_count"
+                        widget="statinfo"
+                        string="Suspension"
+                    />
+                </button>
+            </xpath>
+            <xpath expr="//group[@name='right']" position="inside">
+                <field name="suspension_state" invisible="1" />
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page name="suspensions" string="Suspension" invisible="is_template">
+                    <group>
+                        <field name="max_suspension_days" />
+                        <field name="total_suspension_days_used" />
+                        <field
+                            name="suspension_state"
+                            widget="badge"
+                            decoration-warning="suspension_state == 'suspended'"
+                        />
+                    </group>
+                    <div class="mb-2">
+                        <button
+                            name="%(agreement_suspension.action_agreement_suspension_wizard)d"
+                            type="action"
+                            string="Add suspension"
+                            class="btn-primary"
+                            context="{'default_agreement_id': id}"
+                        />
+                    </div>
+                    <field name="suspension_ids" nolabel="1">
+                        <list create="0" delete="1" editable="bottom">
+                            <field name="date_start" />
+                            <field name="date_end" />
+                            <field name="actual_end_date" optional="show" />
+                            <field name="days" />
+                            <field name="state" widget="badge" />
+                            <field name="reason" optional="hide" />
+                            <button
+                                name="action_open_end_wizard"
+                                type="object"
+                                string="End suspension"
+                                icon="fa-check"
+                                invisible="state != 'active'"
+                            />
+                            <button
+                                name="action_delete"
+                                type="object"
+                                string="Delete"
+                                icon="fa-trash"
+                                confirm="Delete this suspension?"
+                            />
+                        </list>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
